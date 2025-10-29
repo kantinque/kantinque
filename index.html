@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KantinQue</title>
+    <meta name="description" content="KantinQue - Solusi pemesanan makanan kampus cepat, mudah, dan modern.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#home">KantinQue</a>
+            <nav class="nav">
+                <a href="#home">Beranda</a>
+                <a href="#keunggulan">Keunggulan</a>
+                <a href="#menu">Menu</a>
+                <a href="#checkout">Checkout</a>
+                <a href="#rating">Rating</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home" class="hero">
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <h1>KantinQue</h1>
+                <p>Platform pemesanan makanan kampus yang cepat, mudah, dan terintegrasi QRIS.</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="#keunggulan">Lihat Keunggulan</a>
+                    <a class="btn" href="#validasi">Hasil Validasi</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="phone-mockup">
+                    <div class="statusbar"></div>
+                    <div class="screen">
+                        <div class="card">
+                            <div class="card-header">Menu Hari Ini</div>
+                            <ul class="menu-list">
+                                <li>Nasi Goreng Spesial</li>
+                                <li>Mie Ayam</li>
+                                <li>Es Teh Manis</li>
+                            </ul>
+                            <button class="btn small add-to-cart">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="keunggulan" class="section">
+        <div class="container">
+            <h2>Keunggulan</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Pemesanan Cepat</h3>
+                    <p>Menu jelas, navigasi ringkas, proses checkout singkat.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>QRIS Terintegrasi</h3>
+                    <p>Pembayaran modern dan efisien dengan QRIS.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Antarmuka Intuitif</h3>
+                    <p>Desain bersih, mudah dipahami untuk pengguna baru.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rating" class="section">
+        <div class="container">
+            <h2>Rating Kantin</h2>
+            <div class="rating-grid">
+                <div class="rating-card">
+                    <h3>Beri Penilaian</h3>
+                    <div class="stars" id="rating-stars" aria-label="Rating bintang" role="radiogroup">
+                        <button class="star" data-value="1" aria-label="1 bintang">★</button>
+                        <button class="star" data-value="2" aria-label="2 bintang">★</button>
+                        <button class="star" data-value="3" aria-label="3 bintang">★</button>
+                        <button class="star" data-value="4" aria-label="4 bintang">★</button>
+                        <button class="star" data-value="5" aria-label="5 bintang">★</button>
+                    </div>
+                    <p class="muted" id="rating-hint">Klik bintang untuk memberi rating.</p>
+
+                    <div class="feedback">
+                        <label for="feedback-text">Masukan</label>
+                        <textarea id="feedback-text" rows="3" placeholder="Tulis saran/masukan Anda..."></textarea>
+                        <div class="feedback-actions">
+                            <button class="btn" id="submit-feedback">Kirim Masukan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rating-card">
+                    <h3>Ringkasan Rating</h3>
+                    <div class="rating-summary">
+                        <div class="avg" id="rating-avg">0.0</div>
+                        <div class="count" id="rating-count">(0 penilaian)</div>
+                    </div>
+
+                    <h3 style="margin-top:16px">Detail Penilaian</h3>
+                    <ul class="feedback-list" id="preset-ratings">
+                        <li><strong>Tampilan Aplikasi</strong> — 4,6/5<br><span class="muted">Desain dianggap menarik, mudah dipahami.</span></li>
+                        <li><strong>Kemudahan Pemesanan</strong> — 4,8/5<br><span class="muted">Fitur menu dan checkout mudah digunakan.</span></li>
+                        <li><strong>Kecepatan Akses</strong> — 4,4/5<br><span class="muted">Perlu optimasi pada kecepatan loading.</span></li>
+                        <li><strong>Metode Pembayaran</strong> — 4,7/5<br><span class="muted">Integrasi QRIS dinilai efisien dan modern.</span></li>
+                    </ul>
+                    <h3 style="margin-top:16px">Detail Penilaian</h3>
+                    <div class="rating-table" id="preset-ratings">
+                        <div class="row"><span class="chip">Tampilan Aplikasi</span><span class="badge">4,6/5</span></div>
+                        <div class="row"><span class="chip">Kemudahan Pemesanan</span><span class="badge">4,8/5</span></div>
+                        <div class="row"><span class="chip">Kecepatan Akses</span><span class="badge">4,4/5</span></div>
+                        <div class="row"><span class="chip">Metode Pembayaran</span><span class="badge">4,7/5</span></div>
+                    </div>
+
+                    <h3 style="margin-top:16px">Masukan Pengguna</h3>
+                    <ul id="feedback-list" class="feedback-list"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <h2>Menu</h2>
+            <div class="menu-grid">
+                <div class="product-card">
+                    <div class="product-head">
+                        <h3>Nasi Goreng Spesial</h3>
+                        <span class="price" data-price="15000">Rp15.000</span>
+                    </div>
+                    <p class="muted">Porsi besar, dilengkapi telur dan ayam suwir.</p>
+                    <button class="btn small add-item" data-name="Nasi Goreng Spesial" data-price="15000">Tambah</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-head">
+                        <h3>Mie Ayam</h3>
+                        <span class="price" data-price="12000">Rp12.000</span>
+                    </div>
+                    <p class="muted">Kuah gurih, topping ayam melimpah.</p>
+                    <button class="btn small add-item" data-name="Mie Ayam" data-price="12000">Tambah</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-head">
+                        <h3>Es Teh Manis</h3>
+                        <span class="price" data-price="5000">Rp5.000</span>
+                    </div>
+                    <p class="muted">Pelepas dahaga dingin menyegarkan.</p>
+                    <button class="btn small add-item" data-name="Es Teh Manis" data-price="5000">Tambah</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-head">
+                        <h3>Kopi Susu</h3>
+                        <span class="price" data-price="8000">Rp8.000</span>
+                    </div>
+                    <p class="muted">Racikan kopi kantin favorit mahasiswa.</p>
+                    <button class="btn small add-item" data-name="Kopi Susu" data-price="8000">Tambah</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="checkout" class="section alt">
+        <div class="container">
+            <h2>Checkout</h2>
+            <div class="checkout-grid">
+                <div class="cart">
+                    <h3>Keranjang</h3>
+                    <div class="cart-body">
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Qty</th>
+                                    <th>Harga</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-items"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <h3>Ringkasan Pembayaran</h3>
+                    <div class="summary-line"><span>Subtotal</span><strong id="subtotal">Rp0</strong></div>
+                    <div class="summary-line"><span>Pajak (10%)</span><strong id="tax">Rp0</strong></div>
+                    <div class="summary-line total"><span>Total</span><strong id="grand-total">Rp0</strong></div>
+                    <button id="pay-qris" class="btn primary" disabled>Bayar via QRIS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="section">
+        <div class="container">
+            <h2>Kontak</h2>
+            <p>Butuh demo atau ingin berdiskusi? Hubungi kami.</p>
+            <a class="btn" href="mailto:halo@kantinque.app">halo@kantinque.app</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> KantinQue</p>
+            <a href="#home" class="to-top">Kembali ke atas</a>
+        </div>
+    </footer>
+
+    <!-- Modal QRIS -->
+    <div id="qris-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-content" role="document">
+            <button class="modal-close" aria-label="Tutup" data-close>×</button>
+            <h3>Scan untuk Bayar</h3>
+            <p class="muted">Simulasi QRIS — gunakan aplikasi pembayaran Anda untuk memindai.</p>
+            <div class="qris-box">
+                <img src="assets/img/qris-placeholder.svg" alt="QRIS" width="220" height="220">
+            </div>
+            <button class="btn" id="finish-payment">Selesai</button>
+        </div>
+    </div>
+
+    <!-- Template Struk (hidden, printable) -->
+    <div id="receipt" class="receipt section printable" style="display:none">
+        <div class="container">
+            <h2>Struk Pembayaran</h2>
+            <p id="receipt-date"></p>
+            <table class="cart-table" id="receipt-items"></table>
+            <p><strong>Total:</strong> <span id="receipt-total"></span></p>
+            <p class="muted">Terima kasih telah bertransaksi di KantinQue.</p>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
